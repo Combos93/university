@@ -1,3 +1,17 @@
+GIT
+  remote: https://github.com/rspec/rspec-rails
+  revision: 5e1ebec4b2e74de68566919c91b8ad8c1000e4f8
+  branch: 4-0-maintenance
+  specs:
+    rspec-rails (4.0.1)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (~> 3.9)
+      rspec-expectations (~> 3.9)
+      rspec-mocks (~> 3.9)
+      rspec-support (~> 3.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -187,14 +201,6 @@ GEM
     rspec-mocks (3.9.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
-    rspec-rails (4.0.1)
-      actionpack (>= 4.2)
-      activesupport (>= 4.2)
-      railties (>= 4.2)
-      rspec-core (~> 3.9)
-      rspec-expectations (~> 3.9)
-      rspec-mocks (~> 3.9)
-      rspec-support (~> 3.9)
     rspec-support (3.9.3)
     rubocop (0.88.0)
       parallel (~> 1.10)
@@ -260,7 +266,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.3)
   rails-i18n
-  rspec-rails
+  rspec-rails!
   rubocop
   shoulda-matchers
   simplecov

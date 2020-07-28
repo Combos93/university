@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: user_groups
+#
+#  id         :bigint           not null, primary key
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  group_id   :integer
+#  user_id    :integer
+#
+# Indexes
+#
+#  index_user_groups_on_group_id  (group_id)
+#  index_user_groups_on_user_id   (user_id)
+#
+
+require 'rails_helper'
+
+RSpec.describe UserGroup, type: :model do
+  it { should belong_to(:group) }
+  it { should belong_to(:student) }
+end

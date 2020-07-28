@@ -31,3 +31,4 @@
 
 en:
   hello: "Hello world"
+  error_range_date: 'must be greater than date_start'
