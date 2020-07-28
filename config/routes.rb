@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root to: 'courses#index'
 
   resources :courses, only: %i[index show] do

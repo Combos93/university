@@ -10,7 +10,6 @@ gem 'rails-i18n'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'activeadmin'
-gem 'pundit'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
