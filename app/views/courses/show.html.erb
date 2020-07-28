@@ -2,11 +2,11 @@
 <hr />
 <p><%= @course.data if @course.data %>
   <% if @course.groups.group_by_future.present? %>
-  <h3>Набор в группы:</h3>
+  <h3><b>Набор в группы:</b></h3>
   <% @course.groups.group_by_future.each do |group| %>
     <p><%= "Начало занятий: #{group.start_date.to_date}" %>
     <p><%= "Окончание занятий: #{group.finish_date.to_date}" %>
-    <p>Список студентов:</p>
+    <h3>Список студентов:</h3>
     <% group.students.each do |student| %>
       <p><%= student.email %>
     <% end %>

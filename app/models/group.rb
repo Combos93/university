@@ -17,11 +17,11 @@ class Group < ApplicationRecord
   }
   scope :group_by_past, -> { where('finish_date < ?', Date.current).order(start_date: :desc) }
 
-  private
-
-  def students
+  def all_students
     students.where(role: :student)
   end
+
+  private
 
   def correct_dates
     return unless start_date && finish_date

@@ -12,7 +12,7 @@
     <p><%= link_to course.name, {action: "show", id: course.id} %>
       <% if course.new_group %>
       <p><%= "Начало ближайших занятий: #{course.new_group.start_date&.to_date}" %>
-      <p><%= "Число записавшихся студентов: #{course.new_group.students&.count}"%>
+      <p><%= "Число записавшихся студентов: #{course.new_group.all_students&.count}"%>
     <% else %>
       <p><%= 'Следите за новостями!' %>
     <% end %>

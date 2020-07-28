@@ -2,7 +2,8 @@ if Rails.env.development?
   %w[admin professor].each do |role|
     Student.create!(
       email: "#{role}@example.com",
-      role: role
+      role: role,
+      name: role
     )
   end
 
