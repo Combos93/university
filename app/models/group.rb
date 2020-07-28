@@ -9,7 +9,19 @@ class Group < ApplicationRecord
 
   validate :correct_dates
 
+  scope :with_students, -> { includes(:user_groups).where.not(user_groups: { id: nil }) }
+  scope :group_by_future, -> { where('start_date >= ?', Date.current).order(start_date: :asc) }
+  scope :current_group, lambda {
+    where('start_date < ? AND finish_date >= ?', Date.current, Date.current)
+      .order(start_date: :asc)
+  }
+  scope :group_by_past, -> { where('finish_date < ?', Date.current).order(start_date: :desc) }
+
   private
+
+  def students
+    students.where(role: :student)
+  end
 
   def correct_dates
     return unless start_date && finish_date
