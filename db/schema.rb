@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_105944) do
 
   create_table "students", force: :cascade do |t|
     t.integer "role", null: false
-    t.string "name", null: false
+    t.string "name"
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -41,12 +41,12 @@ ActiveRecord::Schema.define(version: 2020_07_28_105944) do
   end
 
   create_table "user_groups", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "student_id"
     t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_user_groups_on_group_id"
-    t.index ["user_id"], name: "index_user_groups_on_user_id"
+    t.index ["student_id"], name: "index_user_groups_on_student_id"
   end
 
   add_foreign_key "groups", "courses"
