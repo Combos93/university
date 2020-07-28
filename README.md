@@ -1,24 +1,23 @@
-# README
+## Приложение "Университет"
+Проект-приложение реализовано на Ruby/Rails (v. 5.2.4.3) в учебных целях.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Краткое описание
 
-Things you may want to cover:
+Приложение Univesity предназначено для записи на курсы университета, в группы, по определённым языкам программирования. По курсам с определенной периодичностью набираются группы студентов. Для того чтобы пройти курс, пользователь сначала выбирает группу и записывается в нее.
 
-* Ruby version
+Установка и запуск приложения
 
-* System dependencies
+Выполнить установку всех библиотек и подготовить базу данных(используется БД Postgres) - файл database.yml в папке 'config'. Также заполнить базы сидами.
 
-* Configuration
+* bundle install
+* bundle exec rake db:create db:migrate db:seed
 
-* Database creation
+Для запуска локального сервера нужно выполнить команду:
 
-* Database initialization
+* bundle exec rails s
 
-* How to run the test suite
+После запуска локального сервера:
 
-* Services (job queues, cache servers, search engines, etc.)
+Будет доступно само приложение и админпанель:
 
-* Deployment instructions
-
-* ...
+по адресу localhost:3000/admin
